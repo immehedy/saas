@@ -47,6 +47,16 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
+  stripe_customer_id String?
+  stripe_subscription_item String?
+}
+
+model Log {
+  id            String    @id @default(cuid())
+  userId String
+  method String
+  status Int
+  created DateTime @default(now())
 }
 
 model VerificationToken {
