@@ -49,6 +49,7 @@ model User {
   sessions      Session[]
   stripe_customer_id String?
   stripe_subscription_item String?
+  api_key String?
 }
 
 model Log {
